@@ -1,7 +1,7 @@
 name: Fetch and Process RSS Feed
 on:
   schedule:
-    - cron: '0 * * * *' # 毎時0分に実行
+    - cron: '*/15 7-23 * * *'
 jobs:
   fetch-feed:
     runs-on: ubuntu-latest
