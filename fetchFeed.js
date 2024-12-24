@@ -9,7 +9,7 @@ const { execSync } = require('child_process');
 
 const ppng_server = 'https://gosyujin-ppng.glitch.me/rss';
 const n = ''; // '?n=1';
-const send_ppng_cmd = `curl -s -T - ${ppng_server}${n}`;
+const send_ppng_cmd = `/usr/bin/curl -s -T - ${ppng_server}${n}`;
 const seenArticlesFile = `${process.env["HOME"]}/.seenArticles.json`;
 
 // 既に見た記事をファイルから読み込む
@@ -36,7 +36,7 @@ function sleep(ms) {
 
 // piping serverにポストする
 function exec(post) {
-  execSync(`/bin/echo '${post}\n' | ${send_ppng_cmd}`);
+  execSync(`/usr/bin/echo '${post}\n' | ${send_ppng_cmd}`);
 }
 
 // feedが存在するかチェックする
