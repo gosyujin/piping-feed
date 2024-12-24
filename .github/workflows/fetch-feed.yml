@@ -13,13 +13,13 @@ jobs:
         with:
           node-version: '14' # 必要なNode.jsのバージョンを指定
       - name: Where echo
-          run: which echo
+        run: which echo
       - name: Do echo
-          run: echo Hello
+        run: echo Hello
       - name: Install curl
-          run: sudo apt-get update && sudo apt-get install -y curl
+        run: sudo apt-get update && sudo apt-get install -y curl
       - name: Where curl
-          run: which curl
+        run: which curl
       - name: Install dependencies
         run: npm install
       - name: Run fetchFeed script
