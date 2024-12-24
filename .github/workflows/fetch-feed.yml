@@ -1,5 +1,6 @@
 name: Fetch and Process RSS Feed
 on:
+  workflow_dispatch:
   schedule:
     - cron: '*/15 7-23 * * *'
 jobs:
