@@ -36,7 +36,7 @@ function sleep(ms) {
 
 // piping serverにポストする
 function exec(post) {
-  execSync(`echo '${post}\n' | ${send_ppng_cmd}`);
+  execSync(`/bin/echo '${post}\n' | ${send_ppng_cmd}`);
 }
 
 // feedが存在するかチェックする
