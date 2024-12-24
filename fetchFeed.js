@@ -1,6 +1,30 @@
 // require('dotenv').config({ path: '/Users/USER/.rss' });
 // const FEEDS = process.env.feed.split(',');
-const FEEDS = ['https://www.nhk.or.jp/rss/news/cat2.xml', 'https://www.nhk.or.jp/rss/news/cat3.xml'];
+const FEEDS = [
+  'https://www.nhk.or.jp/rss/news/cat2.xml',
+  'https://www.nhk.or.jp/rss/news/cat3.xml',
+  'https://www.nhk.or.jp/rss/news/cat4.xml',
+  'https://www.nhk.or.jp/rss/news/cat5.xml',
+  'https://www.nhk.or.jp/rss/news/cat6.xml',
+  'https://www.nhk.or.jp/rss/news/cat7.xml',
+  'https://www.nhk.or.jp/rss/news/cat8.xml',
+  'https://b.hatena.ne.jp/entrylist.rss',
+  'https://b.hatena.ne.jp/hotentry.rss',
+  'https://b.hatena.ne.jp/entrylist/social.rss',
+  'https://b.hatena.ne.jp/hotentry/social.rss',
+  'https://b.hatena.ne.jp/entrylist/economics.rss',
+  'https://b.hatena.ne.jp/hotentry/economics.rss',
+  'https://b.hatena.ne.jp/entrylist/life.rss',
+  'https://b.hatena.ne.jp/hotentry/life.rss',
+  'https://b.hatena.ne.jp/entrylist/knowledge.rss',
+  'https://b.hatena.ne.jp/hotentry/knowledge.rss',
+  'https://b.hatena.ne.jp/entrylist/it.rss',
+  'https://b.hatena.ne.jp/hotentry/it.rss',
+  'https://b.hatena.ne.jp/entrylist/entertainment.rss',
+  'https://b.hatena.ne.jp/hotentry/entertainment.rss',
+  'https://b.hatena.ne.jp/entrylist/fun.rss',
+  'https://b.hatena.ne.jp/hotentry/fun.rss'
+];
 
 const fs = require('fs');
 const Parser = require('rss-parser');
