@@ -1,0 +1,18 @@
+name: Fetch and Process RSS Feed
+on:
+  schedule:
+    - cron: '0 * * * *' # 毎時0分に実行
+jobs:
+  fetch-feed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14' # 必要なNode.jsのバージョンを指定
+      - name: Install dependencies
+        run: npm install
+      - name: Run fetchFeed script
+        run: node fetchFeed.js
