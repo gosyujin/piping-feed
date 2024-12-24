@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "rss-parser": "^3.13.0"
+  }
+}
