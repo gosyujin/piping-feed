@@ -84,7 +84,7 @@ async function fetchAndDisplayFeeds() {
 
       feed.items.map(item => {
         if(seenArticles.includes(item.link)) {
-          // console.info(`feed article: already post ${item.link}`)
+          console.info(`feed article: already post ${item.link}`)
           return;
         }
 
@@ -117,7 +117,7 @@ ${item.content?.replace(/\`/g, '')
       console.error(`Error fetching feed ${feedUrl}:`, error);
     }
   }
-
+  console.info(newSeenAtricles);
   saveSeenArticles(newSeenArticles);
 }
 
