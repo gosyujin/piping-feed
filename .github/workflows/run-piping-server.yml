@@ -2,7 +2,7 @@ name: Install and Run Piping Server
 on:
   workflow_dispatch:
 jobs:
-  fetch-feed:
+  run-piping-server:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout repository
