@@ -17,17 +17,24 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y curl
       - name: Install dependencies
         run: npm install
-      - name: Exists dotfile
+      - name: Restore seen articles
+        uses: actions/cache@v4.2.0
+        with:
+          path: /home/runner/.seenArticles.json
+          key: ${{ runner.os }}-seen-articles
+      - name: Exists dotfile before
         run: ls -la /home/runner/
       - name: Run fetchFeed script
         run: node fetchFeed.js
-      - name: Cache
+      - name: Exists dotfile after
+        run: ls -la /home/runner/
+      - name: Cache seen articles
         uses: actions/cache@v4.2.0
         with:
           # A list of files, directories, and wildcard patterns to cache and restore
           path: /home/runner/.seenArticles.json
           # An explicit key for restoring and saving the cache
-          # key: 
+          key: ${{ runner.os }}-seen-articles
           # An ordered multiline string listing the prefix-matched keys, that are used for restoring stale cache if no cache hit occurred for key. Note `cache-hit` returns false in this case.
           # restore-keys: # optional
           # The chunk size used to split up large files during upload, in bytes
