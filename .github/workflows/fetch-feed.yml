@@ -24,10 +24,14 @@ jobs:
           key: ${{ runner.os }}-seen-articles
       - name: Exists dotfile before
         run: ls -la /home/runner/
+      - name: Cat seen articles before
+        run: cat /home/runner/.seenArticles.json
       - name: Run fetchFeed script
         run: node fetchFeed.js
       - name: Exists dotfile after
         run: ls -la /home/runner/
+      - name: Cat seen articles after
+        run: cat /home/runner/.seenArticles.json
       - name: Cache seen articles
         uses: actions/cache@v4.2.0
         with:
