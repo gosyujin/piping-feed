@@ -1,0 +1,1 @@
+[![Fetch and Process RSS Feed](https://github.com/gosyujin/piping-feed/actions/workflows/fetch-feed.yml/badge.svg?branch=main&event=schedule)](https://github.com/gosyujin/piping-feed/actions/workflows/fetch-feed.yml)
