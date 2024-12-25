@@ -89,6 +89,8 @@ async function fetchAndDisplayFeeds() {
         }
 
         const post = `
+-------------------------------
+${item.pubDate}
 ${item.link}
 ${item.title?.replace(/\`/g, '')
         .replace(/&gt;/g, '＞')
