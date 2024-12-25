@@ -1,8 +1,8 @@
 name: Fetch and Process RSS Feed
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '*/5 0-9 * * *'
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
 jobs:
   fetch-feed:
     runs-on: ubuntu-24.04
