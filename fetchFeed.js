@@ -119,7 +119,7 @@ ${item.content?.replace(/\`/g, '')
       console.error(`Error fetching feed ${feedUrl}:`, error);
     }
   }
-  console.info(newSeenAtricles);
+  console.info(newSeenArticles);
   saveSeenArticles(newSeenArticles);
 }
 
